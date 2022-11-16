@@ -1,0 +1,103 @@
+<!-- Nyari apaan bang? ;-; -->
+<!-- 103 Line :v -->
+
+<!DOCTYPE html>
+<html lang="in">
+  <head>
+    <!-- Default -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=300, initial-scale=1.0">
+    <meta name="author" content="Muhammad Restu">
+    <meta name="copyright" content="Muhammad Restu">
+
+    <!-- untuk Google -->
+    <meta name="description" content="TicTacToe">
+    <meta name="keywords" content="Tictactoe,TicTacToe,tictactoe,Tic tac toe,Tic Tac Toe,tic tac toe">
+
+    <!-- untuk Facebook -->          
+    <meta property="og:title" content="TicTacToe">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="https://muhammadrestu999.github.io/TicTacToe-html/">
+    <meta property="og:description" content="TicTacToe">
+
+    <!-- untuk Twitter -->          
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="TicTacToe">
+    <meta name="twitter:description" content="TicTacToe">
+    <meta name="twitter:image" content="">
+
+    <title>TicTacToe</title>
+    <style>
+      body {
+        background-color: #000000;
+        color: #ffffff;
+      }        
+      .bg_biru {
+        background-color: #4077ff;
+      }
+      .kotak {
+        width: 200px;
+        height: 200px;
+      }
+      .tengah {
+        text-align: center;
+      }
+      div.bg_biru.tengah.kotak > button {
+        background-color: #a0dcf7;
+        color: #ffffff;
+        width: 20%;
+        height: 20%;
+      }
+      div.gtw1 {
+        height: 200px;
+      }
+      div.gtw2 {
+        height: 40px;
+      }
+      div#error {
+        background-color: #ff0000;
+        width: 200px;
+        height: 20px;
+      }
+      div#success {
+        background-color: #00ff00;
+        width: 200px;
+        height: 20px;
+      }
+      div#warn {
+        background-color: #ff8800;
+        width: 200px;
+        height: 20px;
+      }
+      div#pilih > button.l {
+        float: left;
+        width: 50px;
+        height: 50px;
+      }
+      div#pilih > button.r {
+        float: right;
+        width: 50px;
+        height: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="gtw1"></div>
+    <center>
+      <div id="error" hidden="true"></div>
+      <div id="success" hidden="true"></div>
+      <div id="warn" hidden="true"></div>
+      <div class="bg_biru kotak" id="pilih">
+        <h1>Pilih mode</h1><br><br>
+        <button onclick="mode = 'PvP';pilih.hidden = true;game.hidden = false" class="l">PvP</button> <img src="garis.png" style="width: 2px;height: 50px;"> <button onclick="mode = 'PvB';pilih.hidden = true;game.hidden = false" class="r">PvB</button>
+      </div>
+      <div class="bg_biru kotak tengah" id="game" hidden="true">
+        <h1>Giliran <span id="giliran"></span></h1>
+        <button>1</button> <button>2</button> <button>3</button><br>
+        <button>4</button> <button>5</button> <button>6</button><br>
+        <button>7</button> <button>8</button> <button>9</button>
+      </div>
+    </center>
+    <script src="main.js"></script>
+  </body>
+</html>
