@@ -1,10 +1,12 @@
 // Nyari apaan bang? ;-;
-// 144 Line :v
+// 154 Line :v
 
 const btn = document.querySelectorAll("div.bg_biru.tengah.kotak > button");
+const giliran = document.querySelector("span#giliran");
 const error = document.getElementById("error");
 const success = document.getElementById("success");
 const warn = document.getElementById("warn");
+
 
 const diIsi = [
   " ", " ", " ",
@@ -21,6 +23,7 @@ for(let button of btn) {
     let p1 = turn == "p1";
     let p2 = turn == "p2";
     gim(this, p1, p2);
+    giliran.innerHTML = getTurn();
   };
 };
 
@@ -91,6 +94,8 @@ function gim(tags, p1, p2) {
     if(winner() == null && !diIsi.filter(v => v == " ")[0]) {
       done = true;
       warning("Seri!");
+      h3_giliran.innerHTML = "";
+      document.querySelector(".gtw2").hidden = false;
       for(let i of btn) i.disabled = true;
       setTimeout(() => {
         location.reload();
@@ -101,6 +106,8 @@ function gim(tags, p1, p2) {
       for(let i of btn) i.disabled = true;
       done = true;
       succ(`${winner()} menang!`);
+      h3_giliran.innerHTML = "";
+      document.querySelector(".gtw2").hidden = false;
       setTimeout(() => {
         location.reload();
       }, 3500);
@@ -120,6 +127,8 @@ function gim(tags, p1, p2) {
       } else if(winner() == null) {
         done = true;
         warning("Seri!");
+        h3_giliran.innerHTML = "";
+        document.querySelector(".gtw2").hidden = false;
         for(let i of btn) i.disabled = true;
         setTimeout(() => {
           location.reload();
@@ -131,6 +140,7 @@ function gim(tags, p1, p2) {
   };
 };
 
+giliran.innerHTML = getTurn();
 
 setInterval(function() {
   console.clear();

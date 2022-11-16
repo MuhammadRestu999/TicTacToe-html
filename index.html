@@ -1,5 +1,5 @@
 <!-- Nyari apaan bang? ;-; -->
-<!-- 103 Line :v -->
+<!-- 104 Line :v -->
 
 <!DOCTYPE html>
 <html lang="in">
@@ -80,6 +80,7 @@
         height: 50px;
       }
     </style>
+    <script src="main.js" async></script>
   </head>
   <body>
     <div class="gtw1"></div>
@@ -92,12 +93,12 @@
         <button onclick="mode = 'PvP';pilih.hidden = true;game.hidden = false" class="l">PvP</button> <img src="garis.png" style="width: 2px;height: 50px;"> <button onclick="mode = 'PvB';pilih.hidden = true;game.hidden = false" class="r">PvB</button>
       </div>
       <div class="bg_biru kotak tengah" id="game" hidden="true">
-        <h1>Giliran <span id="giliran"></span></h1>
+        <h3 id="h3_giliran">Giliran <span id="giliran"></span></h3>
+        <div class="gtw2" hidden></div>
         <button>1</button> <button>2</button> <button>3</button><br>
         <button>4</button> <button>5</button> <button>6</button><br>
         <button>7</button> <button>8</button> <button>9</button>
       </div>
     </center>
-    <script src="main.js"></script>
   </body>
 </html>
